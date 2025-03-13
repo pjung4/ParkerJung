@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parker Jung</title>
+    <link rel="stylesheet" href="ArcGISResume.css">
+</head>
+    
+    
+<body>
+    <header>
+        <h1>Parker Jung</h1>
+    </header>
+    <nav>
+        <a>pdsks</a>
+    </nav>
+    
+    
+  <div class="main-content">
+      <div class="left-content">
+          <br>
+            <div class="tab-buttons">
+            <button id="projects-btn" class="tab-button active">Projects</button>
+            <button id="figures-btn" class="tab-button">Figures</button>
+            <button id="cv-btn" class="tab-button">CV</button>
+            </div>
+            <div id="projects-content" class="tab-content active">
+                    <div id="SiteText"> 
+                    <p>This Website!<span id="toggleC" onclick="toggleDetailsC()">&#x25BC;</span></p>
+                        <div id="detailsC" style="display: none;">
+                                <ul>
+                                <p>Focuses: Include substantial information and many examples of my work while keeping it streamlined with interactive features</p>
+                                <b>HTML, CSS, JavaScript:</b> Built entire site and incorporated interaction (interactive tabs/nav, dropdown/expand for more info, open links in new tabs, etc.)</ul> 
+                        </div>
+                        </div>
+                
+                
+                    <div id="COTText"> 
+                    <p>Tyranny in the Great Barrier Reef: Crown of Thorns Outbreaks (1999-2005) <a href = "images/COTFinal-1.png"  target="_blank">(link)</a><span id="toggle" onclick="toggleDetails()">&#x25BC;</span></p>
+                        <div id="details" style="display: none;">
+                                <ul><p>For Print (colors may not render properly on screens)</p>
+                                <p>Focuses: First design specifically for print - focus on incorporating background information and graphics into one final layout</p>
+                                <b>Data Acquisition:</b> Based on AIMS MANTA long-term monitoring dataset. <br> <b>ArcGIS Pro:</b> Cleaned and symbolized data by year and COT count <br><b>Adobe Illustrator:</b> Design, text, figure.</ul>
+                        </div>
+            </div>
+                        <br>
+                    <div id="COTImage">    
+             <div class="image-container2"> 
+                <img src="images/COTFinal-1.png" alt="Crown of Thorns Sea Star Map">
+                </div>
+             
+    </div>
+                    
+                <br><br><br>
+                
+                <div id="WhaleText"> 
+                        <p>Reported Whale Strandings on U.S. Coasts (2005-2015) <a href = "https://pjung4.github.io/WhaleWebMap/WhaleProject3.html"  target="_blank">(link)</a><span id="toggleA" onclick="toggleDetailsA()">&#x25BC;</span></p>
+                        <div id="detailsA" style="display: none;">
+                                <ul><p>Interactive Web Map</p>
+                                    <p>Focuses: Efficiently and succinctly communicate a large amount of information in an approachable manner; maximize number and variety of interactive features; NOAA Branding Guide (fonts, colors, images)</p>
+                                <b>Data Acquisition:</b> Downloaded spreadsheet of strandings from NOAA, NetCDFs from AquaMaps models of species distributions. <br> <b>ArcGIS Pro:</b> Worked with stranding data (points, spatiality based on lat/lon of stranding) to make toggling in HTML more feasible. Converted NetCDFs to rasters, selected cells with >50% probability, and converted to polygons. Export as GeoJSONs. <br><b>HTML, CSS, JavaScript:</b> Worked with MapBox to initialize an iFrame that allows interaction with the map and supplementary features on top of the map distinct. Site has an informational panel with pictures of each species, the sounds they make, and links to their information pages on NOAA's website. Map is interactive (panning and zooming) and data layers can be toggled on and off by species. Colors and text set to match NOAA branding guide where possible. </ul>
+                        </div>
+                    </div>
+                        <br>
+                    <div id="WhaleImage">    
+             <div class="image-container2"> 
+                <img src="images/WhaleMapScreenshot.png" alt="Whale Web Map">
+                </div>
+             
+                    </div>
+                
+                <br><br><br>
+                
+                
+                 <div id="LampreyText"> 
+                        <p>Description, Comparison, and Prediction of Pacific Lamprey <i>Entosphenus tridentatus</i> and Western Brook Lamprey (Lampetra ayresii) Habitat in the Southern Oregon Coastal Range<span id="toggleB" onclick="toggleDetailsB()">&#x25BC;</span></p>
+                        <div id="detailsB" style="display: none;">
+                                <ul> <p>Undergraduate Thesis</p>
+                                    <p>Focuses: Translating GIS skills from class exercises to research in my field</p>
+                                    <b>Data Acquisition:</b> eDNA presence/absence dataset provided to me by South Slough NERR; Collected open source raster data describing pertinent environmental descriptors within the study area. <br> <b>ArcGIS Pro:</b> Used this data to create raster layers for the remaining variables of interest including slope, hillshade, aspect, and cost distance. Reclassified data to be best suited for analysis and modeling. <br><b>Python:</b> Pulled values associated with the coordinates of sample sites from each raster. Used these values to train a random forest classifier to predict the likelihood of lamprey presence based on these variables. Drew conclusions about the significance of each variable in habitat preference based on Mean Decrease in Impurity (MDI). <br> <b>Output:</b> 10m raster displaying suitability predictions made by random forest classifier for each species, MDI measurements indicating relative significance of variables, general report of findings for the public, 50-page technical report, oral defense</ul>
+                        </div>
+                     </div>
+                                             <br>
+                <div id="LampreyImage">    
+                <div class="image-container3"> 
+                <img src="images/lamprey.jpg" alt="Whale Web Map">
+                </div>
+             
+                     </div>
+                     
+                <br><br><br>
+        
+            </div>
+            <div id="figures-content" class="tab-content">
+                <div id="figure-text">
+                    <p></p> </div>
+                <div class="figure-grid">
+                    <div class="figure-item">
+                        <div class="panel-text2">I also use my GIS skills to create easily-digestible maps as supporting figures for research papers.</div>
+                    </div>
+                    <div class="figure-item">
+                        <img src="images/FigSICB2GLarge.jpg" alt="Image 3">
+                        <div class="panel-text">Sample site map for SICB25 Guam Nemertea Poster</div>
+                    </div>
+                    <div class="figure-item">
+                        <img src="images/ThesisSampleMap.png" alt="Image 2">
+                        <div class="panel-text">Sample site and study area map for undergraduate thesis</div>
+                    </div>
+                    <div class="figure-item">
+                        <img src="images/FigOmanMapDraft1.jpg" alt="Image 4">
+                        <div class="panel-text"><b>Mockup:</b> Creative solution for a professor who was having trouble labeling a large number of widely-distributed sample sites</div>
+                    </div>
+                </div>
+                            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>
+                                            <br>            <br>
+            <br>
+            <br>    
+             <p>   </p>  
+        </div>
+            <div id="cv-content" class="tab-content"> 
+            <br>
+         <h3>Education</h3>
+         <p>B.S. in Marine Biology, Geography (GIS); minor in Food Studies - University of Oregon, Oregon Institute of Marine Biology, Clark Honors College - June 2024 <span id="toggle1" onclick="toggleDetails1()">&#x25BC;</span></p>
+                <div id="details1" style="display: none;">
+                    <blockquote><ul>
+                    <li><b>Marine Biology:</b> Extensive experience in freshwater, estuarine, and marine habitats through a year of immersive field- and lab-intensive courses at the University's marine field station, the Oregon Institute of Marine Biology.  <br> <blockquote>Upper Division Courses: Invertebrate Zoology, Molecular Marine Bio, Comparative Embryology of Invertebrates, Estuarine Biology, Biological Oceanography, Marine Birds & Mammals, Marine Bioacoustics, Marine Ecology, Animal Behavior</blockquote> <br> <blockquote>Skills: DNA barcoding, Geneious Prime, BOLD, invertebrate taxonomy and identification (adult and larval), field experience </blockquote></li>
+                    <li><b>Geography</b> (<b>GIS</b> concentration): Project-based courses focused on using ArcGIS Pro, Adobe Creative Cloud, HTML, and other skills to transform open source data into compelling infographics. Worked alongside/Collaborated with/Practiced the iterative design review process with several members of the renowned InfoGraphics Lab that work closely with/that have experience working with such prominent organizations as esri and NACIS <br> <blockquote>Upper Division Courses: GIS I, GIS II, Geospatial Data Science, Advanced Cartography, Webmapping, Geomorphology</blockquote><br> <blockquote>Skills: ArcGIS Pro, Adobe Creative Cloud, HTML, CSS, JavaScript, Mapbox, Python (Rasterio, GeoPandas)</blockquote></li>
+                    <li><b>Clark Honors College:</b> Courses covering a breadth of topics including bioacoustics, short films, food sovereignty, astroimaging, and the physics of sports.<br> <blockquote>Thesis project: "Description, Comparison, and Prediction of Pacific Lamprey (<i>Entosphenus tridentatus</i>) and Western Brook Lamprey (<i>Lampetra ayresii</i>) Habitat in the Southern Oregon Coastal Range"</blockquote></li>
+                    <li><b>Food Studies:</b> Exposure to all aspects of food and how it relates to our daily lives including topics of food waste, sustainable food acquisition practices, the impacts of current food production practices on the environment, food insecurity, food sovereignty. Included a term spent working hands-on at the University's Urban Farm getting a real look at the degree of change produced by the sustainable practices taught in other classes.</li>
+                    </ul></blockquote>
+                 </div>
+            <br>
+        <h3>Field and Laboratory Research Experiences</h3>
+        <p> Research Assistant - Maslakova Lab, University of Oregon - June 2024 - August 2024 <span id="toggle2" onclick="toggleDetails2()">&#x25BC;</span></p>
+                <div id="details2" style="display: none;">
+                    <blockquote><ul>
+                    <b>Guam Nemertea Project</b>
+                        <li>DNA Barcoded ~100 nemerteans collected during Guam Bioblitz 2024 (DNA extraction, PCR, gel electrophoresis)</li>
+                        <li>Sequence editing and analysis in Geneious Prime</li>
+                        <li>Compared against similar sequences from NCBI GenBank and made NJ trees to view our data in the context of previous findings from a variety of localities.</li>
+                        <li>Species delineation</li>
+                        <li>BOLD (creating records, uploading traces and images)</li>
+                        <li>Image editing using Photoshop</li>
+                        <li>Presented at SICB 2025 (poster)</li>
+                    </ul></blockquote>
+                </div>
+        <p> Science Internship and Thesis Project with South Slough NERR - January 2023 - May 2024 <span id="toggle3" onclick="toggleDetails3()">&#x25BC;</span></p>
+                <div id="details3" style="display: none;">
+                    <blockquote><ul>
+                    <b>Science Internship - August 2023 - December 2023</b>
+                    <br>
+                        Field-based internship assisting a variety of projects focused on monitoring and conservation of local ecosystems
+                        <li>European Green Crab sampling: crab trapping and identification, recorded metrics of invasive green crabs to further understanding of population composition and document settlement events</li>
+                        <li>Eelgrass monitoring: Recorded data pertaining to the health and status of native eelgrass beds (density of coverage, sediment cores, presence of reproductive structures, epiphytes)</li>
+                        <li>Lamprey ammocoete sampling: Collected lamprey ammocoetes via electrofishing; recorded stream metrics (wet width, depth, substrate, etc.); recorded size, life stage, and species</li>
+                    <br>
+                        <b>Thesis Project: "Description, Comparison, and Prediction of Pacific Lamprey (<i>Entosphenus tridentatus</i>) and Western Brook Lamprey (<i>Lampetra ayresii</i>) Habitat in the Southern Oregon Coastal Range" - January 2023 - May 2024</b>
+                        <li>Data Acquisition: Collected open source raster data describing pertinent environmental descriptors within the study area.
+                        <li>ArcGIS Pro: Used this data to create raster layers for the remaining variables of interest including slope, hillshade, aspect, and cost distance. Reclassified data to be best suited for analysis and modeling.</li>
+                        <li>Python: Pulled values associated with the coordinates of sample sites from each raster. Used these values to train a random forest classifier to predict the likelihood of lamprey presence based on these variables. Drew conclusions about the significance of each variable in habitat preference based on Mean Decrease in Impurity (MDI).</li>
+                    </ul></blockquote>
+                    </div>
+            <p> Larval Sorter in Young Lab - September 2023 - December 2023 <span id="toggle8" onclick="toggleDetails8()">&#x25BC;</span></p>
+                <div id="details8" style="display: none;">
+                    <blockquote><ul>
+                        <li>Sorted preserved zooplankton tows into morphotypes</li>
+                    </ul></blockquote>
+                </div>
+            <br>
+        <h3>Other Relevant Professional Experience</h3>
+        <p> Teaching Assistant for Invertebrate Zoology Course at OIMB - June 2024 - August 2024 <span id="toggle4" onclick="toggleDetails4()">&#x25BC;</span></p>
+                <div id="details4" style="display: none;">
+                    <blockquote><ul>
+                    <br>
+                        <b>Field-intensive summer course at the Oregon Institute of Marine Biology (OIMB)</b> <br>
+                        Day-long class:
+                        <li>mornings often spent in the field collecting animals belonging to the week's phyla of interest, focus on maximizing diversity</li><li>afternoons spent in lab, students looking at the animals collected and understanding how concepts discussed in lecture appear in the real world</li>
+                        <br> <br>
+                        <b>Responsibilities:</b>
+                        <br> <br>
+                        <li>guided students both in the field and in lab to understand what they were looking at, where they might find a certain animal, and how to distinguish between morphologically similar species</li>
+                        <li>maintained sea tables, cared for collected animals, returned animals to appropriate habitats</li>
+                        <li>navigated OIMB's collection of preserved specimens to both introduce students to taxa we don't see in Oregon and teach them what animals look like during different life stages</li>
+                    </ul></blockquote>
+                </div>    
+        <p> Teaching Lab Assistant for Marine Biology Course on Main Campus - January 2024 - March 2024 <span id="toggle5" onclick="toggleDetails5()">&#x25BC;</span></p>
+                <div id="details5" style="display: none;">
+                    <blockquote><ul>
+                    <br>
+                        <b>Marine Biology course primarily for non-majors</b>
+                        <li>practice conveying complex topics to students being introduced to them for the first time</li>
+                        <li>reinforced knowledge of basic concepts from a wide range of topics within marine biology from invertebrate anatomy to chemical oceanography</li>
+                        <li>set-up and take-down of a variety of lab activities and equipment</li>
+                    </ul></blockquote>
+                </div>  
+         <p> Natural History Collections Transcription Volunteer, Zooniverse - February 2025 - present <span id="toggle9" onclick="toggleDetails9()">&#x25BC;</span></p>
+                <div id="details9" style="display: none;">
+                    <blockquote><ul>
+                    <br>
+                        <li>Digitizing natural history records to facilitate their use in research</li>
+                        <li>Primarily work on California Academy of Sciences Notes from Nature</li>
+                    </ul></blockquote>
+                </div>  
+        <p> Aquarium Care at the Charleston Marine Life Center - June 2023 - December 2023 <span id="toggle6" onclick="toggleDetails6()">&#x25BC;</span></p>
+                <div id="details6" style="display: none;">
+                    <blockquote><ul>
+                    <br>
+                        <b>Volunteer at Charleston Marine Life Center (CMLC), OIMB's community outreach aquarium and museum</b>
+                        <li>cleaning tanks, preparing food, feeding out</li>
+                        <li>communicating with kids about scientific topics</li>
+                    </ul></blockquote>
+                </div>  
+        <p> Native Plant Nursery Intern - August 2022 - January 2023 <span id="toggle7" onclick="toggleDetails7()">&#x25BC;</span></p>
+                <div id="details7" style="display: none;">
+                    <blockquote><ul>
+                    <br>
+                        <b>Intern at the City of Eugene's Native Plant Nursery</b>
+                        <li>seed collection and cleaning</li>
+                        <li>up-potting</li>
+                        <li>weeding</li>
+                    </ul></blockquote>
+                </div> 
+            <br>
+        <h3>Certifications</h3>
+        <p> PADI Open Water SCUBA Diver</p>
+                            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>            <br>
+            <br>
+            <br>
+             <p>   </p>   
+    </div>
+       </div>
+   </div>
+    
+    
+    <div class="right-content">
+       <div class="about-me-container">
+        <div class="about-me-panel">
+            <h2>About Me</h2>
+            <div class="checkerboard">
+                <div class="image-box">
+                    <img class="responsive-image" src="images/MARBProfPic.jpeg" alt="Me holding a Pisaster sea star on the Oregon Coast">
+                </div>
+                <div class="text-box">
+                    <p>I am currently looking to gain more experience in the fields of <b>invertebrate zoology</b>, <b>GIS</b>, and <b>molecular genetics</b>. I spent a year living, learning, and working at the Oregon Institute of Marine Biology (OIMB), during which I developed extensive knowledge of the marine, estuarine, and freshwater environments of the PNW.</p>
+                </div>
+                <div class="text-box">
+                    <p>I am passionate about leveraging spatial data science and open source data to maximize the conclusions we can draw from field datasets. In my free time I enjoy film and digital photography, printmaking, and tidepooling!</p>
+                </div>
+                <div class="image-box">
+                    <img class="responsive-image" src="images/AboutMe2.jpg" alt="Me kneeling next to a tidepool at sunset">
+                </div>
+            </div>
+            </div>
+           <br>
+           <div class="skills-panel">
+               <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <p>Software and Programming</p>
+                        <ul>
+                            <li>ArcGIS Pro</li>
+                            <li>Adobe Creative Cloud (Photoshop, Illustrator)</li>
+                            <li>HTML, CSS, JavaScript (used to build this website)</li>
+                            <li>Python (Rasterio, GeoPandas)</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <p>Lab</p>
+                        <ul>
+                            <li>DNA Barcoding</li>
+                            <li>Sequence Analysis & Species Delineation</li>
+                            <li>Microscopy</li>
+                            <li>Identification of larval types</li>
+                        </ul>
+      </div>
+   </div>
+           </div>
+        </div>
+        </div>
+    
+    
+    <footer>
+        <section id="footer"> 
+        <p>&copy; 2025 Parker Jung</p>
+        </section>
+        <section id="footer2"> 
+        <p>San Francisco Bay Area <br> parkerjungg@gmail.com <br> (925) 899-4763</p>
+        </section>
+    </footer>
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the tab buttons and the content sections
+    const projectsBtn = document.getElementById('projects-btn');
+    const figuresBtn = document.getElementById('figures-btn');
+    const cvBtn = document.getElementById('cv-btn');
+    const projectsContent = document.getElementById('projects-content');
+    const figuresContent = document.getElementById('figures-content');
+    const cvContent = document.getElementById('cv-content');
+    
+ function switchTab(selectedTab, selectedContent, otherTabs, otherContents) {
+        // Fade out other contents
+        otherContents.forEach(content => {
+            content.style.opacity = 0;
+            content.style.visibility = 'hidden';  // Hide the content while fading
+            setTimeout(() => {
+                content.style.display = 'none';
+            }, 500); // Allow fade-out transition before removing from view
+        });
+
+        // Fade in the selected content
+        selectedContent.style.display = 'block';  // Ensure the selected content is shown
+        setTimeout(() => {
+            selectedContent.style.opacity = 1;
+            selectedContent.style.visibility = 'visible';  // Make it visible during fade-in
+        }, 50); // Slight delay to allow the content to be displayed first
+
+        // Activate the selected tab, deactivate others
+        selectedTab.classList.add('active');
+        otherTabs.forEach(tab => tab.classList.remove('active'));
+    }
+
+    // Add event listeners for the tab buttons
+    projectsBtn.addEventListener('click', function() {
+        switchTab(projectsBtn, projectsContent, [figuresBtn, cvBtn], [figuresContent, cvContent]);
+    });
+
+    figuresBtn.addEventListener('click', function() {
+        switchTab(figuresBtn, figuresContent, [projectsBtn, cvBtn], [projectsContent, cvContent]);
+    });
+
+    cvBtn.addEventListener('click', function() { // New
+        switchTab(cvBtn, cvContent, [projectsBtn, figuresBtn], [projectsContent, figuresContent]); // New
+    });
+
+    // Set initial states (make sure the correct content is shown on page load)
+    projectsContent.style.display = 'block';
+    figuresContent.style.display = 'none';
+    cvContent.style.display = 'none'; // New
+});
+    
+    
+    // COTText
+    function toggleDetails() {
+    var details = document.getElementById("details");
+    var toggle = document.getElementById("toggle");
+
+                if (details.style.display === "none") {
+                    details.style.display = "block";
+                    toggle.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details.style.display = "none";
+                    toggle.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetailsA() {
+    var detailsA = document.getElementById("detailsA");
+    var toggleA = document.getElementById("toggleA");
+
+                if (detailsA.style.display === "none") {
+                    detailsA.style.display = "block";
+                    toggleA.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    detailsA.style.display = "none";
+                    toggleA.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetailsB() {
+    var detailsB = document.getElementById("detailsB");
+    var toggleB = document.getElementById("toggleB");
+
+                if (detailsB.style.display === "none") {
+                    detailsB.style.display = "block";
+                    toggleB.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    detailsB.style.display = "none";
+                    toggleB.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetailsC() {
+    var detailsC = document.getElementById("detailsC");
+    var toggleC = document.getElementById("toggleC");
+
+                if (detailsC.style.display === "none") {
+                    detailsC.style.display = "block";
+                    toggleC.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    detailsC.style.display = "none";
+                    toggleC.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    
+    // CV (CV numbered, letter remaining COT and figs)
+    function toggleDetails1() {
+    var details1 = document.getElementById("details1");
+    var toggle1 = document.getElementById("toggle1");
+
+                if (details1.style.display === "none") {
+                    details1.style.display = "block";
+                    toggle1.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details1.style.display = "none";
+                    toggle1.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails2() {
+    var details2 = document.getElementById("details2");
+    var toggle2 = document.getElementById("toggle2");
+
+                if (details2.style.display === "none") {
+                    details2.style.display = "block";
+                    toggle2.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details2.style.display = "none";
+                    toggle2.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails3() {
+    var details3 = document.getElementById("details3");
+    var toggle3 = document.getElementById("toggle3");
+
+                if (details3.style.display === "none") {
+                    details3.style.display = "block";
+                    toggle3.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details3.style.display = "none";
+                    toggle3.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails4() {
+    var details4 = document.getElementById("details4");
+    var toggle4 = document.getElementById("toggle4");
+
+                if (details4.style.display === "none") {
+                    details4.style.display = "block";
+                    toggle4.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details4.style.display = "none";
+                    toggle4.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails5() {
+    var details5 = document.getElementById("details5");
+    var toggle5 = document.getElementById("toggle5");
+
+                if (details5.style.display === "none") {
+                    details5.style.display = "block";
+                    toggle5.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details5.style.display = "none";
+                    toggle5.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails6() {
+    var details6 = document.getElementById("details6");
+    var toggle6 = document.getElementById("toggle6");
+
+                if (details6.style.display === "none") {
+                    details6.style.display = "block";
+                    toggle6.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details6.style.display = "none";
+                    toggle6.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails7() {
+    var details7 = document.getElementById("details7");
+    var toggle7 = document.getElementById("toggle7");
+
+                if (details7.style.display === "none") {
+                    details7.style.display = "block";
+                    toggle7.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details7.style.display = "none";
+                    toggle7.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails8() {
+    var details8 = document.getElementById("details8");
+    var toggle8 = document.getElementById("toggle8");
+
+                if (details8.style.display === "none") {
+                    details8.style.display = "block";
+                    toggle8.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details8.style.display = "none";
+                    toggle8.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+    function toggleDetails9() {
+    var details9 = document.getElementById("details9");
+    var toggle9 = document.getElementById("toggle9");
+
+                if (details9.style.display === "none") {
+                    details9.style.display = "block";
+                    toggle9.innerHTML = "&#x25B2;";  // Change icon to upward arrow
+                    } else {
+                    details9.style.display = "none";
+                    toggle9.innerHTML = "&#x25BC;";  // Change icon to downward arrow
+                    }
+                    }
+        
+
+    </script>
+</body>
+</html>
