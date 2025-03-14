@@ -532,3 +532,8 @@ ul {
     cursor: default;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.writing-content {
+    width: 50%; 
+    padding-right: 10px;
+}

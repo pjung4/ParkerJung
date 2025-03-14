@@ -26,20 +26,21 @@
             <button id="projects-btn" class="tab-button active">Projects</button>
             <button id="figures-btn" class="tab-button">Figures</button>
             <button id="cv-btn" class="tab-button">CV</button>
+            <button id="writing-btn" class="tab-button">Writing Sample</button>
             </div>
             <div id="projects-content" class="tab-content active">
                     <div id="SiteText"> 
                     <p>This Website!<span id="toggleC" onclick="toggleDetailsC()">&#x25BC;</span></p>
                         <div id="detailsC" style="display: none;">
                                 <ul>
-                                <p>Focuses: Include substantial information and many examples of my work while keeping it streamlined with interactive features</p>
-                                <b>HTML, CSS, JavaScript:</b> Built entire site and incorporated interaction (interactive tabs/nav, dropdown/expand for more info, open links in new tabs, etc.)</ul> 
+                                <p>Focuses: Include substantial information and examples of my work while keeping it streamlined with interactive features</p>
+                                <b>HTML, CSS, JavaScript:</b> Built entire site and incorporated interaction (interactive tabs/nav, dropdown/expand for more info, text when hovering etc.)</ul> 
                         </div>
                         </div>
                 
                 
                     <div id="COTText"> 
-                    <p>Tyranny in the Great Barrier Reef: Crown of Thorns Outbreaks (1999-2005) <a href = "images/COTFinal-1.png"  target="_blank">(link)</a><span id="toggle" onclick="toggleDetails()">&#x25BC;</span></p>
+                    <p>Tyranny in the Great Barrier Reef: Crown of Thorns Outbreaks (1999-2005) <a href = "images/COTFinal-1.png"  target="_blank">(view)</a><span id="toggle" onclick="toggleDetails()">&#x25BC;</span></p>
                         <div id="details" style="display: none;">
                                 <ul><p>For Print (colors may not render properly on screens)</p>
                                 <p>Focuses: First design specifically for print - focus on incorporating background information and graphics into one final layout</p>
@@ -91,7 +92,7 @@
              
                      </div>
                      
-                <br><br><br>
+                <br><br><br><br><br><br>
         
             </div>
             <div id="figures-content" class="tab-content">
@@ -117,7 +118,7 @@
                             <br>            <br>
             <br>
             <br>            <br>
-            <br>
+            <br><br><br><br><br><br>
             <br>
                                             <br>            <br>
             <br>
@@ -241,17 +242,22 @@
             <br>            <br>
             <br>
             <br>            <br>
-            <br>
+            <br><br><br><br><br><br>
             <br>            <br>
             <br>
             <br>
              <p>   </p>   
     </div>
+            <div id="writing-content" class="tab-content">
+                <div id="writing-iframe">
+                    <p><iframe src="images/Writing%20Sample.pdf" width="50%" height="700px" style="border: none;"></iframe></p> </div> 
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>  </p>
+        </div>
        </div>
    </div>
     
     
-    <div class="right-content">
+  <div class="right-content">
        <div class="about-me-container">
         <div class="about-me-panel">
             <h2>About Me</h2>
@@ -298,7 +304,7 @@
         </div>
     
     
-    <footer>
+  <footer>
         <section id="footer"> 
         <p>&copy; 2025 Parker Jung</p>
         </section>
@@ -314,9 +320,11 @@
     const projectsBtn = document.getElementById('projects-btn');
     const figuresBtn = document.getElementById('figures-btn');
     const cvBtn = document.getElementById('cv-btn');
+    const writingBtn = document.getElementById('writing-btn');
     const projectsContent = document.getElementById('projects-content');
     const figuresContent = document.getElementById('figures-content');
     const cvContent = document.getElementById('cv-content');
+    const writingContent = document.getElementById('writing-content');
     
  function switchTab(selectedTab, selectedContent, otherTabs, otherContents) {
         // Fade out other contents
@@ -342,21 +350,26 @@
 
     // Add event listeners for the tab buttons
     projectsBtn.addEventListener('click', function() {
-        switchTab(projectsBtn, projectsContent, [figuresBtn, cvBtn], [figuresContent, cvContent]);
+        switchTab(projectsBtn, projectsContent, [figuresBtn, cvBtn, writingBtn], [figuresContent, cvContent, writingContent]);
     });
 
     figuresBtn.addEventListener('click', function() {
-        switchTab(figuresBtn, figuresContent, [projectsBtn, cvBtn], [projectsContent, cvContent]);
+        switchTab(figuresBtn, figuresContent, [projectsBtn, cvBtn, writingBtn], [projectsContent, cvContent, writingContent]);
     });
 
     cvBtn.addEventListener('click', function() { // New
-        switchTab(cvBtn, cvContent, [projectsBtn, figuresBtn], [projectsContent, figuresContent]); // New
+        switchTab(cvBtn, cvContent, [projectsBtn, figuresBtn, writingBtn], [projectsContent, figuresContent, writingContent]); // New
+    });
+        
+    writingBtn.addEventListener('click', function() { // New
+        switchTab(writingBtn, writingContent, [projectsBtn, figuresBtn, cvBtn], [projectsContent, figuresContent, cvContent]); // New
     });
 
     // Set initial states (make sure the correct content is shown on page load)
     projectsContent.style.display = 'block';
     figuresContent.style.display = 'none';
     cvContent.style.display = 'none'; // New
+    writingContent.style.display = 'none';
 });
     
     
